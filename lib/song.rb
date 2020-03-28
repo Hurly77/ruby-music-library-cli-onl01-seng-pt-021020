@@ -64,6 +64,7 @@ end
 
 def self.new_from_filename(file)
  artist, song, genre = file.chomp(".mp3").split(" - ")
+
  artist = Artist.find_or_create_by_name(artist)
  genre = Genre.find_or_create_by_name(genre)
  new(song, artist, genre)

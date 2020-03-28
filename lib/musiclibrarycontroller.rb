@@ -19,6 +19,7 @@ def call
     puts "To quit, type 'exit'."
     puts "What would you like to do?"
 
+<<<<<<< HEAD
     if input == 'list songs'
       list_songs
     end
@@ -37,6 +38,11 @@ def call
     if input == 'play song'
       play_song
     end
+=======
+    if input = 'list songs'
+      list_songs
+    end
+>>>>>>> 8e9d452b1223c5abad07b55481362a80f680ae7e
 
     input = gets.strip
   end
@@ -88,6 +94,7 @@ def play_song
   if (1..Song.all.length).include?(input)
   song = Song.all.sort_by(&:name)[input - 1]
 end
-  puts "Playing #{song.name} by #{song.artist.name}" if song
+  puts "Playing #{song.name} by #{song.artist.name}"
+  if song
 end
 end
